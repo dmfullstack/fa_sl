@@ -1,0 +1,58 @@
+<table>
+        <tr>
+                <td>Enter Title</td>
+                <td>
+                        <input type="text" [(ngModel)]="name" id="location">
+                </td>
+        </tr>
+        <tr>
+                <td>Enter Cusine</td>
+                <td>
+                        <input type="text" [(ngModel)]="cusine" name="cusine"  id="cuisine"> </td>
+
+        </tr>
+        <tr>
+                <td colspan="2">
+                        <button type="button" (click)="searchforrestaurants()" id="search-button">Search</button>
+                </td>
+        </tr>
+</table>
+
+
+<div class="row rounded m-1 restaurant-card" id="search-result" style="background-color: #a0a597">
+               
+        <div *ngFor="let restaurant of resultset?.restaurants" class="card border-success m-1 rounded col-md-6 col-lg-3
+                col-sm-8"  style="width: 20rem;">
+                
+                <div class="card-body" (click)="onCardClick(restaurant)">
+                <img class="img-thumbnail" src={{restaurant.restaurant.featured_image}} alt="Card image cap">
+                <li>
+                     
+                </li>
+                <div class="card-body">
+                        <h5 class="card-title
+                restaurant-name">{{restaurant.restaurant.name}}</h5>
+                        <p class="card-text
+                restaurant-address">{{restaurant.restaurant.location.address}}</p>
+
+                        <p class="card-text text-primary restaurant-COT">
+                                Cost of Two : {{restaurant.restaurant.currency}} {{restaurant.restaurant.average_cost_for_two}}
+                        </p>
+
+
+
+                        <p class="card-text text-primary restaurant-rating" id="restuarantRating">
+                                Rating : {{restaurant.restaurant.user_rating.aggregate_rating}} {{restaurant.restaurant.user_rating.rating_text}}
+                        </p>
+
+                        <p class="card-text text-primary restaurant-vote">
+                                Votes : {{restaurant.restaurant.user_rating.votes}}
+                        </p>
+
+                        </div>
+                        </div>
+                        <button *ngIf="restaurant.restaurant.addedAsFav; else addFavouriteBlock" class="btn btn-outline-dark remove" (click)="removeFavourite(restaurant)">Remove favourite</button>
+                        <ng-template #addFavouriteBlock>
+                                <button class="btn btn-outline-primary favourite" (click)="addFavourite(restaurant)">Add favourite</button>
+                        </ng-template>
+                </div>

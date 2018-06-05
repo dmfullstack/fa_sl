@@ -1,0 +1,76 @@
+.view-detail {
+    padding: 0;	
+  }
+
+  .boxshadow {
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background-color: blanchedalmond;
+}
+
+.border{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reviewHead{
+  padding-top: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+  clear: both;
+}
+
+.resContentDiv{
+float: left;
+}
+.imgDiv{
+  float: left;
+  padding-left: 0;
+}
+
+.name{
+
+  font-size: 22px;
+    line-height: 22px;
+    color: #1d2124a1;
+    background: #343a4033;
+    padding: 10px;
+    border-radius: 4px;
+    
+
+}
+
+.name p {
+  margin: 0 !important;
+  padding: 5px !important;
+ }
+.resDetails{
+  font-size: 16px;
+    line-height: 22px;
+    color: #1d2124a1;
+   margin-top: 10px;
+   
+  }
+    
+
+.review{
+  font-weight: normal;
+  font-size: 14px;
+  clear: both;
+}
+   
+
+.resid{
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+  color: #1d2124e0;
+}
+
+.sbtbuton{
+  margin-top: 20px;
+  background-color:  #1d2124a1 !important;
+  border: none !important;
+}
+    

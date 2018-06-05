@@ -1,0 +1,42 @@
+.restaurant-card{
+    background-color:cornsilk;
+    padding: 30px
+
+}
+
+.restaurant-name{
+    font: 15px arial, sans-serif italic bold;
+}
+
+
+.restaurant-address{
+min-height: 100;  
+
+}
+
+.restaurant-COT{
+    font: 12px arial, sans-serif italic bold
+}
+
+.restaurant-rating{
+    font: 12px arial, sans-serif italic cursive
+   
+}
+
+.restaurant-description{
+    min-height: 100;  
+}
+
+.favourite{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.remove{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: bisque;
+}
+
+
+

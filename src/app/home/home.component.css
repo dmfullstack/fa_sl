@@ -1,0 +1,29 @@
+.restaurant-card{
+    background-color:cyan;
+    padding: 30px
+
+}
+
+.restaurant-name{
+    font: 15px arial, sans-serif italic bold;
+}
+
+
+.restaurant-address{
+min-height: 100;  
+
+}
+
+.favourite{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.removeFav{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: bisque;
+}
+
+
+

@@ -1,0 +1,38 @@
+<div>
+  <h2>Restaurant Detail View</h2>
+</div>
+
+
+
+
+<div class="container boxshadow border">
+  <div class="col-sm-6 imgDiv">
+    <img class="img-thumbnail" src={{resultset.featured_image}} alt="Card image cap">
+  </div>
+  <div class="col-sm-6 resContentDiv">
+    <div class="name"><p>{{resultset.id}} : {{resultset.name}}</p></div>
+    <div class="resDetails">Average Cost : {{resultset.average_cost_for_two}}</div>
+    <div class="resDetails">Address : {{resultset.location.address}}</div>
+  </div>
+
+  <div class="reviewHead" id="userReview">Reviews</div>
+  <div *ngFor ="let review of resultset?.user_reviews">
+    <div class="review"><p>{{review.review.review_text}}</p></div>
+  </div>
+
+  <div *ngIf="resultset?.userComments?.length>0 " >
+  <div class="reviewHead" id="userReview">Comments</div>
+  <div *ngFor ="let review of resultset?.userComments">
+    <div class="review"><p>{{review}}</p></div>
+  </div>
+  </div>
+ 
+  <hr class="my-4">
+  <div class="form-group">
+    <label for="comments">Comments:</label><textarea class="form-control" id="resComments" rows="3" #name></textarea>
+    <div>
+    <button class="btn btn-primary btn-lg sbtbuton" (click)="checkforAdd(resultset,name.value)">Add Comments</button>
+  </div>
+  </div>
+
+</div>

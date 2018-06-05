@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+ mysql01:
+  image: mysql/mysql-server:5.6
+  environment:
+    - MYSQL_ROOT_HOST=%
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=foodieapp
+    - MYSQL_PASSWORD=root
+  ports:
+    - "3306:3306"
+  volumes:
+    - .:/var/lib/mysql
+ springboot:
+   build: ./Server
+   image: spring-boot:latest
+   depends_on:
+       - mysql01
+   ports:
+      - 8080:8080
+   environment:
+     - MYSQL_HOST=mysql01
+     - MYSQL_DATABASE=foodieapp
+     - MYSQL_USER=root
+     - MYSQL_PASSWORD=root
+ angular-app:
+   build: .
+   image: angular-app:latest
+   ports:
+    - 4200:4200

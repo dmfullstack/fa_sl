@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+
+<div>
+  <nav [ngClass]="'menu'">
+
+
+    <a routerLink="/search" routerLinkActive="active-link">Search</a> |
+    <a routerLink="/favourites" routerLinkActive="active-link" id="favourites-button">Favourite</a> |
+  </nav>
+  <div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
